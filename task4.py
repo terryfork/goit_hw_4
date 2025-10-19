@@ -22,7 +22,7 @@ def get_upcoming_birthdays(users):
         try:
             birthday = datetime.strptime(user['birthday'], "%Y.%m.%d")
         except ValueError:
-            print(f"{user.name} has invalid birthday format")
+            print(f"{user['name']} has invalid birthday format")
         else:
             next_bd = get_greet_date(today.year, birthday)
             if next_bd < today:
